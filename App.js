@@ -10,8 +10,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import DetailsScreen from './screens/Details';
 import HomeScreen from './screens/Home';
 import LogoTitle from './screens/LogoTitle';
-import Footer from './screens/footer/Footer';
-import Header from './screens/header/Header';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,7 +20,6 @@ function App() {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Header />
       <Stack.Navigator
         screenOptions={{
           headerStyle: {
@@ -44,7 +41,6 @@ function App() {
         />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
-      <Footer />
     </NavigationContainer>
   );
 }

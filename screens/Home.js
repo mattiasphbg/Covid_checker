@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, ImageBackground} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -41,10 +41,14 @@ const Tab = createBottomTabNavigator();
 
 function HomeScreen() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Feed" component={Feed} />
-      <Tab.Screen name="Messages" component={Messages} />
-    </Tab.Navigator>
+    <view>
+      <ImageBackground source={require('../Image/')} resizeMode="cover">
+        <Tab.Navigator>
+          <Tab.Screen name="Feed" component={Feed} />
+          <Tab.Screen name="Messages" component={Messages} />
+        </Tab.Navigator>
+      </ImageBackground>
+    </view>
   );
 }
 
