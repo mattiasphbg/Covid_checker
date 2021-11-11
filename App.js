@@ -7,9 +7,9 @@ import {
 } from '@react-navigation/native';
 import {useFlipper} from '@react-navigation/devtools';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import DetailsScreen from './screens/Details';
-import HomeScreen from './screens/Home';
-import LogoTitle from './screens/LogoTitle';
+import DetailsScreen from './app/components/details/Details';
+import HomeScreen from './app/components/homeScreen/HomeScreen';
+import LogoTitle from './app/components/logoTitle/LogoTitle';
 
 const Stack = createNativeStackNavigator();
 

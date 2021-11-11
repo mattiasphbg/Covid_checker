@@ -2,7 +2,7 @@ import * as React from 'react';
 import {View, Text, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from './Home';
+import HomeScreen from '../homeScreen/HomeScreen';
 
 function DetailsScreen({route, navigation}) {
   /* 2. Get the param */
@@ -20,7 +20,10 @@ function DetailsScreen({route, navigation}) {
           })
         }
       />
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button
+        title="Go to Home"
+        onPress={() => navigation.navigate('HomeScreen')}
+      />
       <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
   );

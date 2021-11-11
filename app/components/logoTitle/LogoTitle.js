@@ -7,7 +7,7 @@ function LogoTitle() {
   return (
     <Image
       style={{width: 50, height: 50}}
-      source={require('../screens/hallow_test.jpg')}
+      source={require('../../image/hallow_test.jpg')}
     />
   );
 }
