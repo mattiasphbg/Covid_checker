@@ -36,7 +36,7 @@ function App() {
           component={HomeScreen}
           options={({navigation, route}) => ({
             headerTitle: props => <LogoTitle {...props} />,
-            headerShown: false,
+            headerShown: true,
           })}
         />
         <Stack.Screen name="Details" component={DetailsScreen} />

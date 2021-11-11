@@ -31,9 +31,10 @@ function Feed() {
 
 function Messages() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Messssages!</Text>
-    </View>
+    <ImageBackground
+      source={{uri: 'https://reactjs.org/logo-og.png'}}
+      resizeMode="cover"
+    />
   );
 }
 
@@ -41,14 +42,10 @@ const Tab = createBottomTabNavigator();
 
 function HomeScreen() {
   return (
-    <view>
-      <ImageBackground source={require('../Image/')} resizeMode="cover">
-        <Tab.Navigator>
-          <Tab.Screen name="Feed" component={Feed} />
-          <Tab.Screen name="Messages" component={Messages} />
-        </Tab.Navigator>
-      </ImageBackground>
-    </view>
+    <Tab.Navigator>
+      <Tab.Screen name="Feed" component={Feed} />
+      <Tab.Screen name="Messages" component={Messages} />
+    </Tab.Navigator>
   );
 }
 
