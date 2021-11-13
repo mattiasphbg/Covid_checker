@@ -3,23 +3,10 @@ import {View, Text, Button, ImageBackground} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-// function HomeScreen({navigation}) {
-//   return (
-//     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-//       <Text>Home Screen</Text>
-//       <Button
-//         title="Go to Details"
-//         onPress={() => {
-//           /* 1. Navigate to the Details route with params */
-//           navigation.navigate('Details', {
-//             itemId: 86,
-//             otherParam: 'anything you want here',
-//           });
-//         }}
-//       />
-//     </View>
-//   );
-// }
+
+import ListCities from '../listCities/ListCities';
+import ListContries from '../listConutries/ListCountries';
+import GetGpsLocation from '../getGpsLocation/GetGpsLocation';
 
 function Feed() {
   return (
@@ -42,9 +29,10 @@ const Tab = createBottomTabNavigator();
 
 function HomeScreen() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Feed" component={Feed} />
-      <Tab.Screen name="Messages" component={Messages} />
+    <Tab.Navigator initialRouteName="Home" backBehavior="history">
+      <Tab.Screen name="Cities" component={ListCities} />
+      <Tab.Screen name="Contries" component={ListContries} />
+      <Tab.Screen name="GpsLocation" component={GetGpsLocation} />
     </Tab.Navigator>
   );
 }
