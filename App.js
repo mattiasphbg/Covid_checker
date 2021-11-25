@@ -8,7 +8,7 @@ import {
 import {useFlipper} from '@react-navigation/devtools';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import DetailsScreen from './app/components/details/Details';
-import HomeScreen from './app/components/homeScreen/HomeScreen';
+import HomeScreen from './app/components/HomeScreen';
 import LogoTitle from './app/components/logoTitle/LogoTitle';
 
 const Stack = createNativeStackNavigator();
@@ -36,7 +36,7 @@ function App() {
           component={HomeScreen}
           options={({navigation, route}) => ({
             headerTitle: props => <LogoTitle {...props} />,
-            headerShown: true,
+            headerShown: false,
           })}
         />
         <Stack.Screen name="Details" component={DetailsScreen} />
