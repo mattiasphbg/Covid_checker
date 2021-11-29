@@ -17,18 +17,35 @@ import ListCities from './listCities/ListCities';
 import ListContries from './listConutries/ListCountries';
 import GetGpsLocation from './getGpsLocation/GetGpsLocation';
 
-function HomeScreen(navigation, props) {
-  const {theme} = props;
+function HomeScreen({navigation}) {
   return (
     <ImageBackground
       style={styles.ImageBackgroundmO}
       source={require('../image/streetWalk.jpg')}
       resizeMode={'cover'}>
-      <Text style={styles.buttonmO}>{'Double click '}</Text>
+      <TouchableOpacity
+        style={styles.buttonmO}
+        onPress={() => {
+          navigate('Details', {itemId: 5, otherParam: '242'});
+        }}>
+        <Text style={undefined}>{'Search'}</Text>
+      </TouchableOpacity>
 
-      <Text style={styles.buttonmO}>{'Double click'}</Text>
+      <TouchableOpacity
+        style={styles.buttonmO}
+        onPress={() => {
+          navigation.navigate('Details', {itemId: 5, otherParam: '24'});
+        }}>
+        <Text style={undefined}>{'Home'}</Text>
+      </TouchableOpacity>
 
-      <Text style={styles.buttonmO}>{'Double click'}</Text>
+      <TouchableOpacity
+        style={styles.buttonmO}
+        onPress={() => {
+          navigation.navigate('Details', {itemId: 5, otherParam: '4'});
+        }}>
+        <Text style={undefined}>{'Close'}</Text>
+      </TouchableOpacity>
     </ImageBackground>
   );
 }
@@ -42,8 +59,10 @@ const styles = StyleSheet.create({
   },
   buttonmO: {
     flex: 1,
-    height: 50,
     width: 50,
+    height: 50,
+    backgroundColor: 'gray',
+    margin: 2,
   },
 });
 
