@@ -13,11 +13,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import ListCities from './listCities/ListCities';
+import SearchCases from './searchCases/SearchCases';
 import ListContries from './listConutries/ListCountries';
-import GetGpsLocation from './getGpsLocation/GetGpsLocation';
+import GetGpsLocation from './getGpsLocation/GetLocalCases';
 
-function HomeScreen({navigation}) {
+function HomeScreen({navigation: {navigate}}) {
   return (
     <ImageBackground
       style={styles.ImageBackgroundmO}
@@ -34,7 +34,7 @@ function HomeScreen({navigation}) {
       <TouchableOpacity
         style={styles.buttonmO}
         onPress={() => {
-          navigation.navigate('Details', {itemId: 5, otherParam: '24'});
+          navigate('Details', {itemId: 5, otherParam: '24'});
         }}>
         <Text style={undefined}>{'Home'}</Text>
       </TouchableOpacity>

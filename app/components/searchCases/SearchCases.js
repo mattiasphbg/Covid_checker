@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {View, Text, Image} from 'react-native';
 
-function ListContries() {
+function SearchCases() {
   return (
     <View>
-      <Text>Contries</Text>
+      <Text>Search Cases</Text>
     </View>
   );
 }
 
-export default ListContries;
+export default SearchCases;
