@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import {
   View,
   Text,
@@ -8,14 +7,13 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-
-import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
+import GetGpsLocation from './getLocalCases/GetLocalCases';
+import {NavigationContainer} from '@react-navigation/native';
 import SearchCases from './searchCases/SearchCases';
-import ListContries from './listConutries/ListCountries';
-import GetGpsLocation from './getGpsLocation/GetLocalCases';
+
+const BtnNav = TouchableOpacity;
 
 function HomeScreen({navigation: {navigate}}) {
   return (
@@ -23,29 +21,27 @@ function HomeScreen({navigation: {navigate}}) {
       style={styles.ImageBackgroundmO}
       source={require('../image/streetWalk.jpg')}
       resizeMode={'cover'}>
-      <TouchableOpacity
+      <BtnNav
         style={styles.buttonmO}
         onPress={() => {
-          navigate('Details', {itemId: 5, otherParam: '242'});
+          navigate('SearchCases');
         }}>
-        <Text style={undefined}>{'Search'}</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
+        <Text style={undefined}>{'SearchCases'}</Text>
+      </BtnNav>
+      <BtnNav
         style={styles.buttonmO}
         onPress={() => {
-          navigate('Details', {itemId: 5, otherParam: '24'});
+          navigate('Home');
         }}>
         <Text style={undefined}>{'Home'}</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
+      </BtnNav>
+      <BtnNav
         style={styles.buttonmO}
         onPress={() => {
-          navigation.navigate('Details', {itemId: 5, otherParam: '4'});
+          navigate('GetLocalCases');
         }}>
-        <Text style={undefined}>{'Close'}</Text>
-      </TouchableOpacity>
+        <Text style={undefined}>{'GetLocalCases'}</Text>
+      </BtnNav>
     </ImageBackground>
   );
 }

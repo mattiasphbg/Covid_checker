@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {View, Text, Image} from 'react-native';
 
-function GetGpsLocation() {
+function GetLocalCases() {
   return (
     <View>
       <Text>Get Gps Location</Text>
@@ -9,4 +9,4 @@ function GetGpsLocation() {
   );
 }
 
-export default GetGpsLocation;
+export default GetLocalCases;

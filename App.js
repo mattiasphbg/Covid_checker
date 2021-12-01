@@ -5,11 +5,13 @@ import {
   NavigationContainer,
   useNavigationContainerRef,
 } from '@react-navigation/native';
-import {useFlipper} from '@react-navigation/devtools';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import DetailsScreen from './app/components/details/Details';
+import {useFlipper} from '@react-navigation/devtools';
 import HomeScreen from './app/components/HomeScreen';
+import SearchCases from './app/components/searchCases/SearchCases';
+import GetLocalCases from './app/components/getLocalCases/GetLocalCases';
 import LogoTitle from './app/components/logoTitle/LogoTitle';
+import DetailsScreen from './app/components/details/Details';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +41,8 @@ function App() {
             headerShown: false,
           })}
         />
+        <Stack.Screen name="SearchCases" component={SearchCases} />
+        <Stack.Screen name="GetLocalCases" component={GetLocalCases} />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
